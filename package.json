@@ -1,0 +1,15 @@
+{
+  "name": "sbi-results-clone-v3",
+  "version": "1.0.0",
+  "description": "SBI-inspired Recruitment Results demo (safe, not affiliated). Node.js + Express + EJS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.2"
+  }
+}

@@ -1,0 +1,106 @@
+
+:root{
+  --purple:#2b0a6a;
+  --purple-2:#1f064e;
+  --yellow:#ffd400;
+  --ink:#0f172a;
+  --muted:#64748b;
+  --line:#e5e7eb;
+  --bg:#ffffff;
+  --card:#ffffff;
+  --radius:14px;
+  --shadow: 0 10px 25px rgba(2,6,23,.08);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height:1.55;
+  color:var(--ink);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+/* Header */
+.header{position:sticky;top:0;z-index:50;background:var(--purple);}
+.topbar{
+  display:flex;align-items:center;justify-content:space-between;
+  max-width:1200px;margin:0 auto;padding:14px 18px;gap:16px;
+}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{height:36px;width:auto}
+.brand .title{color:#fff;font-weight:800;letter-spacing:.4px;font-size:22px}
+.nav{display:flex;gap:18px;align-items:center}
+.nav a{color:#e9eaf6;font-weight:600;font-size:14px;opacity:.9}
+.nav a:hover{opacity:1}
+.contact-btn{
+  background:var(--yellow);color:#18181b;font-weight:800;border-radius:999px;
+  padding:10px 16px;border:none;display:inline-flex;align-items:center;gap:8px;box-shadow:var(--shadow)
+}
+
+.menu-btn{display:none;background:transparent;border:0;color:#fff;font-size:22px}
+
+/* Wrapper */
+.wrapper{max-width:1200px;margin:22px auto;padding:0 18px}
+
+/* Hero */
+.hero-row{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+.title{font-size:40px;font-weight:900;letter-spacing:1px}
+.lead{color:var(--muted);max-width:900px}
+
+/* Filters */
+.filter{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0 22px;
+}
+.select{width:100%;padding:12px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;font-weight:600}
+.search{display:flex;align-items:center;border:1px solid var(--line);border-radius:10px;padding:0 12px}
+.search input{border:0;outline:0;padding:12px 8px;width:100%}
+
+/* Cards */
+.ad-card{
+  display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px;margin-bottom:14px;box-shadow:var(--shadow);transition:transform .12s ease, box-shadow .12s ease;
+}
+.ad-card:hover{transform:translateY(-1px);box-shadow:0 16px 35px rgba(2,6,23,.12)}
+.ad-card strong{display:block;font-size:16px}
+.ad-card .note{display:block;color:var(--muted);margin-top:4px}
+.ad-card .adv{margin-top:12px;font-weight:800;color:var(--purple)}
+
+/* Form */
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.form-row{display:flex;gap:12px;flex-wrap:wrap}
+.input{width:100%;padding:12px 12px;border:1px solid var(--line);border-radius:10px;font-weight:600}
+.label{font-weight:700;margin-bottom:6px;display:block}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:10px;padding:12px 16px;font-weight:800;cursor:pointer}
+.btn-primary{background:var(--purple);color:#fff}
+.btn-secondary{background:#eef2ff;color:#111;border:1px solid #c7d2fe}
+.captcha{display:inline-block;min-width:90px;padding:10px 12px;border-radius:10px;font-weight:900;letter-spacing:2px;background:#eef2ff;border:1px dashed #c7d2fe}
+
+/* Tables */
+.table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.table th,.table td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left}
+.table tr:last-child th,.table tr:last-child td{border-bottom:0}
+.table-striped tr:nth-child(even){background:#fafafa}
+
+/* Footer */
+.footer{margin:32px 0 24px;text-align:center;color:var(--muted);font-size:13px}
+
+/* Back button */
+.back-btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);padding:10px 14px;border-radius:999px;font-weight:700}
+.back-btn:hover{border-color:#cbd5e1}
+
+/* Responsive */
+@media (max-width: 980px){
+  .title{font-size:34px}
+  .filter{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width: 680px){
+  .title{font-size:28px}
+  .hero-row{flex-direction:column;align-items:flex-start}
+  .filter{grid-template-columns:1fr}
+  .nav{display:none}
+  .menu-btn{display:inline-flex}
+}

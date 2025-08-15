@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marks Secured · Login</title>
+  <link rel="stylesheet" href="/public/css/main.css">
+  <script defer src="/public/js/main.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="topbar">
+      <div class="brand">
+        <img src="/public/img/logo.svg" alt="logo">
+        <div class="title">CAREERS</div>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="/">HOME</a><a href="#">JOIN SBI</a><a href="#">WHY SBI</a>
+      </nav>
+      <a class="contact-btn" href="#">CONTACT US</a>
+    </div>
+  </header>
+
+  <div class="wrapper">
+    <img src="/public/img/banner-login.svg" alt="" style="width:100%;border-radius:12px;margin-bottom:16px">
+    <div class="card">
+      <h2 style="margin:0 0 8px">Recruitment of Junior Associates (Customer Support & Sales) in SBI</h2>
+      <p class="lead" style="margin-top:2px">(Main Examination held on 10th & 12th APRIL 2025) — Marks Secured by the Candidate</p>
+
+      <form action="/login" method="post" style="margin-top:10px">
+        <div class="form-row">
+          <div style="flex:1 1 260px">
+            <label class="label">Roll Number or Registration Number</label>
+            <input class="input" name="id" placeholder="Roll No or Reg No" required>
+          </div>
+          <div style="flex:1 1 260px">
+            <label class="label">Date of Birth</label>
+            <input class="input" name="dob" placeholder="dd-mm-yyyy" required>
+          </div>
+        </div>
+
+        <div class="form-row" style="align-items:center;margin-top:8px">
+          <div class="label" style="margin:0">Text Verification</div>
+        </div>
+        <div class="form-row" style="align-items:center">
+          <div class="captcha" id="captchaBox"><%= captcha %></div>
+          <button type="button" id="refreshCaptcha" class="btn btn-secondary">Refresh</button>
+          <input class="input" name="captcha" placeholder="Type characters shown above" required style="flex:1">
+        </div>
+
+        <div style="margin-top:14px;display:flex;gap:10px">
+          <button class="btn btn-primary" type="submit">SUBMIT</button>
+          <button class="btn btn-secondary" type="reset">RESET</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">© Careers Portal.</div>
+</body>
+</html>

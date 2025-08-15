@@ -1,0 +1,52 @@
+[
+  {
+    "name": "SUSHMA",
+    "category": "OBC",
+    "post": "JUNIOR ASSOCIATE (CUSTOMER SUPPORT & SALES)",
+    "appliedUnder": "REGULAR VACANCIES & BACKLOG VACANCIES",
+    "state": "PUNJAB",
+    "dob": "01-01-1997",
+    "rollNo": "1234567890",
+    "regNo": "JA2025REG0001",
+    "totalMarks": 200,
+    "marksScored": 80.5,
+    "cutoffs": {
+      "SC": 63.5,
+      "ST": "-",
+      "OBC": 72.25,
+      "EWS": 76.75,
+      "GEN": 85.75,
+      "LD": 60,
+      "VI": 60,
+      "HI": 60,
+      "D&E": 60,
+      "XS": 60,
+      "DXS": 60
+    }
+  },
+  {
+    "name": "RAHUL KUMAR",
+    "category": "GEN",
+    "post": "JUNIOR ASSOCIATE (CUSTOMER SUPPORT & SALES)",
+    "appliedUnder": "REGULAR VACANCIES",
+    "state": "DELHI",
+    "dob": "12-05-1996",
+    "rollNo": "2233445566",
+    "regNo": "JA2025REG0002",
+    "totalMarks": 200,
+    "marksScored": 92.0,
+    "cutoffs": {
+      "SC": 60,
+      "ST": 55,
+      "OBC": 70,
+      "EWS": 75,
+      "GEN": 90,
+      "LD": 58,
+      "VI": 58,
+      "HI": 58,
+      "D&E": 58,
+      "XS": 58,
+      "DXS": 58
+    }
+  }
+]

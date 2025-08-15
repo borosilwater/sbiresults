@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Careers · Recruitment Results</title>
+  <link rel="stylesheet" href="/public/css/main.css">
+  <script defer src="/public/js/main.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="topbar">
+      <div class="brand">
+        <img src="/public/img/logo.svg" alt="SBI logo">
+        <div class="title">CAREERS</div>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="/">HOME</a>
+        <a href="#">JOIN SBI</a>
+        <a href="#">WHY SBI</a>
+        <a href="#">LIFE AT THE SBI</a>
+        <a href="#">THE SBI STORY</a>
+      </nav>
+      <button class="menu-btn" aria-label="Open Menu">☰</button>
+      <a class="contact-btn" href="#">CONTACT US</a>
+    </div>
+  </header>
+
+  <div class="wrapper">
+    <div class="hero-row">
+      <div>
+        <div class="title">RECRUITMENT RESULTS</div>
+        <p class="lead">Candidates can check below for the results and announcements of all closed recruitment.</p>
+      </div>
+      <div><a class="back-btn" href="javascript:history.back()">← BACK</a></div>
+    </div>
+
+    <div class="filter" role="search">
+      <select class="select" aria-label="Select Post">
+        <option selected>SELECT POST</option>
+        <option>Junior Associate</option>
+      </select>
+      <select class="select" aria-label="Select Department">
+        <option selected>SELECT DEPARTMENT</option>
+        <option>Customer Support & Sales</option>
+      </select>
+      <select class="select" aria-label="Select Year">
+        <option selected>SELECT YEAR</option>
+        <option>2025</option>
+        <option>2024</option>
+      </select>
+      <div class="search">
+        <input id="search" placeholder="Search" aria-label="Search ads">
+      </div>
+    </div>
+
+    <% ads.forEach(ad => { %>
+      <a href="/login?ad=<%= ad.id %>" class="ad-card ad-item" role="article">
+        <strong><%= ad.title %></strong>
+        <span class="note"><%= ad.note %></span>
+        <div class="adv">ADVERTISEMENT NO: <%= ad.advertisementNo %></div>
+      </a>
+    <% }) %>
+  </div>
+
+  <div class="footer">© Careers Portal.</div>
+</body>
+</html>
