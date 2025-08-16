@@ -5,7 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Careers · Recruitment Results</title>
   <link rel="stylesheet" href="/public/css/main.css">
-  <script defer src="/public/js/main.js"></script>
+
+  <style>
+    /* Mobile Menu */
+    .nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+      .nav.active {
+        display: flex;
+      }
+      .menu-btn {
+        display: block;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuBtn = document.querySelector(".menu-btn");
+      const nav = document.querySelector(".nav");
+
+      menuBtn.addEventListener("click", () => {
+        nav.classList.toggle("active");
+        menuBtn.setAttribute(
+          "aria-label",
+          nav.classList.contains("active") ? "Close Menu" : "Open Menu"
+        );
+      });
+    });
+  </script>
 </head>
 <body>
   <header class="header">
